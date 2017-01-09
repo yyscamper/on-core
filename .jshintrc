@@ -40,6 +40,7 @@
     "evil" : false,
     "expr" : true,     // true: Tolerate `ExpressionStatement` as Programs
     "funcscope" : false,
+    "globalstrict" : false,
     "iterator" : false,
     "lastsemic" : false,
     "laxbreak" : false,
@@ -57,18 +58,20 @@
 
     // Environments
     "node": true,
-    "mocha": true,
 
     //Custom Globals
-    "predef" : [
-        "_",
-        "chai",
-        "expect",
-        "helper",
-        "Promise",
-        "request",
-        "should",
-        "sinon",
-        "sinonPromise"
-    ]
+    "globals" : {
+        "describe": false,
+        "it": false,
+        "before": false,
+        "beforeEach": false,
+        "after": false,
+        "afterEach": false,
+        "expect": false,
+        "should": false,
+        "request": false,
+        "helper": false,
+        "chai": false,
+        "sinon": false
+    }
 }
