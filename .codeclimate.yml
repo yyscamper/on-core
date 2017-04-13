@@ -1,0 +1,13 @@
+---
+engines:
+  eslint:
+    enabled: true
+    checks:
+      no-unused-expressions:
+        enabled: false
+  duplication:
+    enabled: false
+ratings:
+  paths:
+  - "**.js"
+exclude_paths: 
