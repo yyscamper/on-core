@@ -7,6 +7,8 @@ var _ = require('lodash'),
 
 require('./lib/extensions');
 
+var b = 0;
+
 module.exports = function (di, directory) {
     di = di || dependencyInjection;
     directory = directory || __dirname;
@@ -16,11 +18,7 @@ module.exports = function (di, directory) {
     var injectables = _.flattenDeep(
         [
             // NPM Packages
-            helper.simpleWrapper(_, '_'),
-            helper.requireWrapper('bluebird', 'Promise'),
-            helper.requireWrapper('rx', 'Rx'),
-            helper.requireWrapper('nconf'),
-            helper.requireWrapper('waterline', 'Waterline'),
+            helper.simpleWrapper(_, '_'), helper.requireWrapper('bluebird', 'Promise'), helper.requireWrapper('rx', 'Rx'), helper.requireWrapper('nconf'), helper.requireWrapper('waterline', 'Waterline'),
             helper.requireWrapper('waterline-criteria', 'WaterlineCriteria'),
             helper.requireWrapper('sails-mongo', 'MongoAdapter'),
             helper.requireWrapper('sails-postgresql', 'PostgreSQLAdapter'),
